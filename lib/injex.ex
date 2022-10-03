@@ -8,7 +8,7 @@ defmodule Injex do
 
   defmacro resolve(entity) when is_atom(entity) do
    quote do
-     Application.get_env(:injex, unquote(entity))
+     Application.compile_env(:injex, unquote(entity))
    end
  end
 end
